@@ -1,1 +1,1 @@
-You can read tutorial https://www.jeejava.com/single-and-multiple-insert-using-spring-jdbctemplate/
+You can read tutorial https://www.roytuts.com/single-and-multiple-insert-using-spring-jdbctemplate/
