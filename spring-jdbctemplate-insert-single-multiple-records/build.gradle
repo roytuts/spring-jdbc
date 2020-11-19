@@ -1,0 +1,38 @@
+buildscript {
+	ext {
+		springBootVersion = '2.4.0'
+	}
+	
+    repositories {
+    	maven {
+    		url 'https://plugins.gradle.org/m2/'
+    	}
+    }
+    
+    dependencies {
+    	classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+plugins {
+    id 'java-library'
+    id 'org.springframework.boot' version "${springBootVersion}"
+}
+
+sourceCompatibility = 12
+targetCompatibility = 12
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter:${springBootVersion}")
+	implementation("org.springframework.boot:spring-boot-starter-jdbc:${springBootVersion}")
+	
+	implementation('mysql:mysql-connector-java:8.0.21')
+	
+	//required for JDK 9 or above
+    implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
+}
