@@ -1,17 +1,38 @@
-plugins {
-    id 'java-library'
+buildscript {
+	ext {
+		springBootVersion = '2.2.6.RELEASE' to 2.4.3
+	}
+	
+    repositories {
+    	mavenLocal()
+    	mavenCentral()
+    }
+    
+    dependencies {
+    	classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
+plugins {
+    id 'java-library'
+    id 'org.springframework.boot' version "${springBootVersion}"
+}
+
+sourceCompatibility = 12
+targetCompatibility = 12
+
 repositories {
-    jcenter()
+	mavenLocal()
+    mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework:spring-core:5.2.7.RELEASE'
-	implementation 'org.springframework:spring-context:5.2.7.RELEASE'
-    implementation 'org.springframework:spring-jdbc:5.2.7.RELEASE'
-    implementation 'mysql:mysql-connector-java:8.0.17'
-    
-    //required for JDK 9 or above
-    implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
+	implementation("org.springframework.boot:spring-boot-starter:${springBootVersion}")
+	implementation("org.springframework.boot:spring-boot-starter-jdbc:${springBootVersion}") {
+		exclude group: 'com.zaxxer', module: 'HikariCP'
+	}
+	implementation('mysql:mysql-connector-java:8.0.17') //8.0.22
+	
+	//required for jdk 9 or above
+	runtimeOnly('javax.xml.bind:jaxb-api:2.4.0-b180830.0359')
 }
