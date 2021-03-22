@@ -1,1 +1,1 @@
-You can go through the tutorial https://github.com/roytuts/spring-jdbc/tree/master/spring-jdbctemplate-insert-single-multiple-records
+You can go through the tutorial https://roytuts.com/single-and-multiple-records-insert-using-spring-jdbctemplate/
