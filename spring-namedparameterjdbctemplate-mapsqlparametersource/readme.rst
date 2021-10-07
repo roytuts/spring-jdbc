@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/spring-namedparameterjdbctemplate-and-mapsqlparametersource-example/
+You can read tutorial https://roytuts.com/spring-namedparameterjdbctemplate-and-mapsqlparametersource-example/
