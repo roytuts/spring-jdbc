@@ -1,0 +1,1 @@
+Please follow the tutorial https://roytuts.com/connecting-to-multiple-oracle-data-sources-using-jdbc-ldap-urls/
