@@ -1,1 +1,0 @@
-You can read tutorial https://www.roytuts.com/select-records-using-queryforobject-queryforlist-beanpropertyrowmapper-in-spring-jdbctemplate/
