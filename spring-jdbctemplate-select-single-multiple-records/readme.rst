@@ -1,1 +1,1 @@
-You can go through the tutorial https://roytuts.com/select-example-using-spring-jdbctemplate/
+Please follow the tutorial https://roytuts.com/select-example-using-spring-jdbctemplate/
