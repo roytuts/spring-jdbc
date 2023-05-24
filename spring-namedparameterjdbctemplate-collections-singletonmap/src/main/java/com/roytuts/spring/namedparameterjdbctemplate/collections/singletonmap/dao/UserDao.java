@@ -14,7 +14,7 @@ public class UserDao {
 	private NamedParameterJdbcTemplate jdbcTemplate;
 
 	public int countByName(String name) {
-		final String sql = "select count(*) from user where name = :name";
+		final String sql = "select count(*) from user where first_name = :name";
 
 		Map<String, String> namedParameters = Collections.singletonMap("name", name);
 
