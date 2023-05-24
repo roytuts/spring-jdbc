@@ -14,7 +14,7 @@ public class SpringNamedParameterJdbcTemplateSingletonMapApp implements CommandL
 	private UserDao dao;
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringNamedParameterJdbcTemplateSingletonMapApp.class, args);
+		SpringApplication.run(SpringNamedParameterJdbcTemplateSingletonMapApp.class, args).close();
 	}
 
 	@Override
