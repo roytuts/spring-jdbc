@@ -15,15 +15,15 @@ public class SpringBeanPropertySqlParameterSourceApp implements CommandLineRunne
 	private UserDao dao;
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBeanPropertySqlParameterSourceApp.class, args);
+		SpringApplication.run(SpringBeanPropertySqlParameterSourceApp.class, args).close();
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		dao.addUser(new User(1, "Soumitra", "soumitra@roytuts.com", "43256789", "Earth"));
+		dao.addUser(new User(1, "Soumitra", "Roy"));
 
 		User user = new User();
-		user.setName("Soumitra");
+		user.setFirstName("Soumitra");
 		System.out.println("Number of Users: " + dao.countByName(user));
 	}
 
