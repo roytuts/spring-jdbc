@@ -1,1 +1,1 @@
-You can go through the tutorial https://www.roytuts.com/spring-namedparameterjdbctemplate-and-beanpropertysqlparametersource-example/
+Please follow the tutorial https://roytuts.com/spring-namedparameterjdbctemplate-and-beanpropertysqlparametersource-example/
