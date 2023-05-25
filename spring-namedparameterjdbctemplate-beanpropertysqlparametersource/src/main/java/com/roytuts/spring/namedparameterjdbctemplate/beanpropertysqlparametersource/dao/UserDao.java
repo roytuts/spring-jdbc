@@ -4,18 +4,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.roytuts.spring.namedparameterjdbctemplate.beanpropertysqlparametersource.model.User;
 
-@Component
+@Repository
 public class UserDao {
 
 	@Autowired
 	private NamedParameterJdbcTemplate jdbcTemplate;
 
 	public void addUser(User user) {
-		final String sql = "insert into user(id, name, email, phone, address) values(:id, :name, :email, :phone, :address)";
+		final String sql = "insert into user(id, first_name, last_name) values(:id, :firstName, :lastName)";
 
 		SqlParameterSource paramSource = new BeanPropertySqlParameterSource(user);
 
@@ -23,7 +23,7 @@ public class UserDao {
 	}
 
 	public int countByName(User user) {
-		final String sql = "select count(*) from user where name = :name";
+		final String sql = "select count(*) from user where first_name = :firstName";
 
 		SqlParameterSource paramSource = new BeanPropertySqlParameterSource(user);
 
