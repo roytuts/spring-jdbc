@@ -10,11 +10,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.roytuts.spring.jdbc.preparedstatement.auto.generated.id.model.User;
 
-@Component
+@Repository
 public class UserDao {
 
 	@Autowired
