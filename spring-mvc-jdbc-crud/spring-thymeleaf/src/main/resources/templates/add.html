@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Spring Boot MVC JDBC CRUD Example</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<h2>Add New Teacher's Information</h2>
+	
+	<p><a th:href="@{'/teachers'}" title="Teachers">List of Teachers</a></p>
+	
+	<div th:if="${msg != null}">
+	  [[${msg}]]
+	</div>
+	
+	<form th:action="@{/add/teacher}" method="post" th:object="${teacher}">
+		<p>Name: <input name="name" th:field="*{name}" type="text" /></p>
+		<p>Expertise: <input name="expertise" th:field="*{expertise}" type="text" /></p>
+		<p><input value="Add Teacher" type="submit" /></p>
+	</form>
+</body>
+
+</html>
