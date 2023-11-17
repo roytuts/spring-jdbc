@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Spring Boot MVC JDBC CRUD Example</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<h2>Teacher Details</h2>
+	
+	<p>Id : [[${teacher.id}]]</p>
+	<p> Name : [[${teacher.name}]]</p>
+	<p> Expertise : [[${teacher.expertise}]]</p>
+	
+	<p><a th:href="@{'/teachers'}" title="Teachers">List of Teachers</a></p>
+</body>
+
+</html>
