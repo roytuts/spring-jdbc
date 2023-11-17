@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Spring Boot MVC JDBC CRUD Example</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<p><a th:href="@{'/addTeacher'}" title="Add New Teacher's Information">Add</a></p>
+	
+	<h2>List of Teachers</h2>
+	
+	<div th:if="${msg != null}">
+	  [[${msg}]]
+	</div>
+	
+	<div th:if="${teachers.size() > 0}">
+		<table cellpadding="5" cellspacing="5" border="1">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Expertise</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="t : ${teachers}">
+					<td>[[${t.id}]]</td>
+					<td>[[${t.name}]]</td>
+					<td>[[${t.expertise}]]</td>
+					<td>
+						<a th:href="@{'/teacher/' + ${t.id}}" title="Details">Details</a>
+						<a th:href="@{'/update/teacher/' + ${t.id}}" title="Update">Update</a>
+						<a th:href="@{'/delete/teacher/' + ${t.id}}" onclick="return confirm('Do you really want to delete?')" title="Delete">Delete</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>
