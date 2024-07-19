@@ -1,1 +1,1 @@
-You can go through the tutorial https://www.roytuts.com/batch-insert-using-spring-jdbctemplate/
+Please follow the tutorial https://roytuts.com/batch-insert-using-spring-jdbctemplate/
